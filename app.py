@@ -138,6 +138,11 @@ def telegram():
         text = random.choice(menu_list)
         
         
+    elif text=="토요일":
+        menu_list = ["샤브향", "아구찜", "도쿄990", "린느", "궁전제과", "햄버거", "틈새라면"]
+        text = random.choice(menu_list)
+        
+        
     elif text=="로또":
         text = random.sample(range(1,46),6)
         
