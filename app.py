@@ -153,12 +153,9 @@ def telegram():
         soup = BeautifulSoup(res, 'html.parser')
         pick = soup.select('#mArticle > div.cmain_tmp > div.section_media > div.hotissue_builtin.hide > div.realtime_part > ol > li > div > div:nth-of-type(1) > span.txt_issue > a')
 
-        silgum = []
-        sil = """"""
+        sil = ""
         for i in pick:
-            silgum.append(i.text)
-            sil = sil + i.text + """
-"""
+            sil = sil + i.text + '\n'
             print(sil)
         text = sil
             
