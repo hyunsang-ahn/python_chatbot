@@ -151,9 +151,33 @@ def telegram():
 #res = requests.get(url).status_code
 
         soup = BeautifulSoup(res, 'html.parser')
-        pick = soup.select('#mArticle > div.cmain_tmp > div.section_media > div.hotissue_builtin.hide > div.realtime_part > ol > li:nth-of-type(1) > div > div:nth-of-type(1) > span.txt_issue > a')
-        print(pick)
-        text = pick[0].text
+        pick = soup.select('#mArticle > div.cmain_tmp > div.section_media > div.hotissue_builtin.hide > div.realtime_part > ol > li > div > div:nth-of-type(1) > span.txt_issue > a')
+
+        silgum = []
+        sil = """"""
+        for i in pick:
+            silgum.append(i.text)
+            sil = sil + i.text + """
+"""
+            print(sil)
+        text = sil
+            
+        
+ 
+            
+            
+            
+            
+        # text = pick[0].text
+        # text = pick[1].text
+        # text = pick[2].text
+        # text = pick[3].text
+        # text = pick[4].text
+        # text = pick[5].text
+        # text = pick[6].text
+        # text = pick[7].text
+        # text = pick[8].text
+        # text = pick[9].text
     #print(chat_id)
     #print(text)
     
